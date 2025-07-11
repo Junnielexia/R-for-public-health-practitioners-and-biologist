@@ -1,4 +1,214 @@
-# 🧪 R for Public Health & Biology: Beginner's Guide
+# 📊 Beginner’s Guide to R for Public Health 🚑🧪
+
+Welcome to your **first steps in R programming** made for **public health heroes, biology brains**, and curious minds 💡. This guide is so simple, even a 6-year-old could start learning!
+
+> 🎯 Goal: Help you explore, clean, and visualize real public health data using R — no experience needed!
+
+---
+
+## 🚀 Getting Started
+
+### 🖥️ 1. Install R & RStudio
+
+- 💾 [Download R](https://cran.r-project.org/)
+- 💻 [Download RStudio (interface)](https://posit.co/download/rstudio-desktop)
+
+Once installed, open RStudio. You'll see:
+- 📜 Console (where code runs)
+- 📝 Script Editor (where you write code)
+- 📊 Environment (variables, data)
+- 🖼️ Plots/Viewer (for graphs and charts)
+
+---
+
+## 👋 Say Hello to R
+
+```r
+print("Hello, Public Health World! 🌍🦠")
+
+
+⸻
+
+➕ Basic Math in R
+
+2 + 2         # ➕ Addition
+10 - 4        # ➖ Subtraction
+5 * 3         # ✖️ Multiplication
+8 / 2         # ➗ Division
+
+
+⸻
+
+📦 Variables
+
+cases <- 20
+population <- 1000
+
+You just created a “box” named cases and put the number 20 inside it.
+
+⸻
+
+🧺 Vectors — Lists of Data
+
+daily_cases <- c(5, 7, 8, 6, 9)  # Cases over 5 days
+
+Do calculations:
+
+sum(daily_cases)     # ➕ Total
+mean(daily_cases)    # 📉 Average
+
+
+⸻
+
+📊 Data Frame — Like a Table
+
+data <- data.frame(
+  day = 1:5,
+  cases = c(5, 7, 8, 6, 9),
+  deaths = c(0, 1, 0, 0, 2)
+)
+print(data)
+
+
+⸻
+
+🔎 Explore the Data
+
+head(data)       # 👀 First 6 rows
+summary(data)    # 📊 Stats like mean, max
+str(data)        # 🧱 Structure
+
+Access a column:
+
+data$cases
+
+
+⸻
+
+📈 Make Graphs 🖼️
+
+📊 Bar Plot
+
+barplot(data$cases,
+        names.arg = data$day,
+        col = "skyblue",
+        main = "📊 Cases by Day",
+        xlab = "Day",
+        ylab = "Cases")
+
+📈 Line Plot
+
+plot(data$day, data$cases,
+     type = "o",
+     col = "darkgreen",
+     main = "📈 Daily Case Trend",
+     xlab = "Day",
+     ylab = "Number of Cases")
+
+
+⸻
+
+📁 Import Real Data (CSV)
+
+mydata <- read.csv("data/malaria_cases.csv")  # Example file
+head(mydata)
+
+📂 Place your .csv file in a folder named data/
+
+⸻
+
+📤 Save Your Output
+
+write.csv(data, "data/output_cases.csv", row.names = FALSE)
+
+
+⸻
+
+🧪 Run a Simple Test
+
+Check if average daily cases > 5:
+
+t.test(data$cases, mu = 5, alternative = "greater")
+
+
+⸻
+
+🛠️ Useful Commands Cheatsheet
+
+🧠 Function	🧰 Use	📝 Example
+print()	Show text/output	print("Hello!")
+<-	Assign values	x <- 10
+c()	Combine values (vector)	c(1, 2, 3)
+data.frame()	Create a table	data.frame(day=1:3)
+sum()	Total	sum(c(5,6,7))
+mean()	Average	mean(c(5,6,7))
+barplot()	Bar chart	barplot(c(5,6,7))
+plot()	Line chart	plot(1:3, c(5,6,7), type="o")
+read.csv()	Load CSV data	read.csv("file.csv")
+write.csv()	Export data to CSV	write.csv(data, "out.csv")
+t.test()	Statistical t-test	t.test(data$cases, mu=5)
+
+
+⸻
+
+🧪 Practice Time! 💪
+
+Try this beginner challenge:
+	1.	Create a vector of new case numbers:
+
+new_cases <- c(3, 5, 7, 2, 4)
+
+	2.	Calculate total & mean:
+
+sum(new_cases)
+mean(new_cases)
+
+	3.	Visualize with a barplot:
+
+barplot(new_cases,
+        main = "🦟 Malaria Cases This Week",
+        xlab = "Day",
+        ylab = "Cases",
+        col = "orange")
+
+
+⸻
+
+📂 Sample Datasets (Optional)
+
+Add a folder in your repo:
+
+📁 data/
+├── malaria_cases.csv
+├── covid_data.csv
+└── hospital_visits.csv
+
+Need real datasets? Try:
+	•	WHO Datasets
+	•	Our World in Data
+	•	Kaggle Health Data
+
+⸻
+
+📚 Learn More
+	•	📘 R for Data Science (Free Book)
+	•	📎 RStudio Cheatsheets
+	•	🌐 Tidyverse.org
+	•	📊 WHO Public Health Data
+
+⸻
+
+🧠 Made for Pre-Master Students
+
+This project is ideal if you’re:
+	•	✅ New to R
+	•	✅ Studying Biology, Public Health, Epidemiology
+	•	✅ Wanting a safe space to play with data 🧸
+
+⸻
+
+
+# chapter 2: 🧪 R for Public Health & Biology: Beginner's to Advanced
 
 *A step-by-step introduction to R programming for public health professionals and biologists with no coding experience.*
 

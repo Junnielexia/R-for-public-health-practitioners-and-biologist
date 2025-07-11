@@ -37,7 +37,7 @@ print("Hello, Public Health World! 🌍🦠")
 8 / 2         # ➗ Division
 
 ```
-⸻
+---
 ```
 
 📦 Variables
@@ -47,7 +47,7 @@ population <- 1000
 
 You just created a “box” named cases and put the number 20 inside it.
 ```
-⸻
+---
 ```
 🧺 Vectors — Lists of Data
 
@@ -60,7 +60,7 @@ sum(daily_cases)     # ➕ Total
 mean(daily_cases)    # 📉 Average
 
 ```
-⸻
+---
 ```
 📊 Data Frame — Like a Table
 
@@ -72,7 +72,7 @@ data <- data.frame(
 print(data)
 
 ```
-⸻
+---
 ```
 🔎 Explore the Data
 
@@ -86,7 +86,7 @@ data$cases
 
 ```
 
-⸻
+---
 ```
 📈 Make Graphs 🖼️
 
@@ -99,6 +99,7 @@ barplot(data$cases,
         xlab = "Day",
         ylab = "Cases")
 ```
+---
 ```
 📈 Line Plot
 
@@ -110,7 +111,7 @@ plot(data$day, data$cases,
      ylab = "Number of Cases")
 
 ```
-⸻
+---
 ```
 📁 Import Real Data (CSV)
 
@@ -119,14 +120,14 @@ head(mydata)
 
 📂 Place your .csv file in a folder named data/
 
-⸻
+---
 
 📤 Save Your Output
 
 write.csv(data, "data/output_cases.csv", row.names = FALSE)
 ```
 
-⸻
+---
 ```
 🧪 Run a Simple Test
 
@@ -135,7 +136,7 @@ Check if average daily cases > 5:
 t.test(data$cases, mu = 5, alternative = "greater")
 
 ```
-⸻
+---
 ```
 🛠️ Useful Commands Cheatsheet
 
@@ -152,8 +153,7 @@ read.csv()	Load CSV data	read.csv("file.csv")
 write.csv()	Export data to CSV	write.csv(data, "out.csv")
 t.test()	Statistical t-test	t.test(data$cases, mu=5)
 ```
-
-⸻
+---
 ```
 🧪 Practice Time! 💪
 
@@ -176,7 +176,7 @@ barplot(new_cases,
         col = "orange")
 
 ```
-⸻
+---
 
 📂 Sample Datasets (Optional)
 
@@ -192,7 +192,7 @@ Need real datasets? Try:
 	•	Our World in Data
 	•	Kaggle Health Data
 
-⸻
+---
 ```
 📚 Learn More
 	•	📘 R for Data Science (Free Book)
@@ -209,7 +209,7 @@ This project is ideal if you’re:
 	•	✅ Studying Biology, Public Health, Epidemiology
 	•	✅ Wanting a safe space to play with data 🧸
 ```
-⸻
+---
 
 
 # chapter 2: 🧪 R for Public Health & Biology: Beginner's to Advanced
@@ -250,7 +250,7 @@ print(mean_age)
 
 Output: [1] 35
 
-⸻
+---
 
 📊 Importing and Exploring Data
 
@@ -274,7 +274,7 @@ unique(covid_data$Country)
 usa_data <- covid_data[covid_data$Country == "USA", ]
 
 
-⸻
+---
 
 🔍 Basic Data Analysis
 
@@ -290,7 +290,7 @@ t.test(treatment, control)
 Key Output:
 	•	p-value < 0.05 → statistically significant difference
 
-⸻
+---
 
 📈 Data Visualization
 
@@ -313,22 +313,22 @@ plot(covid_data$Cases, covid_data$Deaths,
      col = "red")
 
 
-⸻
+---
 
-⸻
+---
 
 📚 Resources
 	•	R for Data Science
 	•	Public Health R Examples
 	•	R Cheat Sheets
 
-⸻
+---
 
 chapter Two
 
 Here’s the GitHub-ready Markdown version of your advanced R guide, formatted with proper code blocks, sections, and GitHub-friendly styling:
 
-⸻
+---
 
 
 # 🔬 Advanced R for Public Health & Biology
@@ -343,7 +343,7 @@ Here’s the GitHub-ready Markdown version of your advanced R guide, formatted w
 install.packages(c("dplyr", "tidyr", "survival", "ggplot2", "sf", "leaflet", "randomForest", "shiny"))
 
 
-⸻
+---
 
 1️⃣ Advanced Data Wrangling
 
@@ -378,7 +378,7 @@ risk_data <- covid_data %>%
   ))
 
 
-⸻
+---
 
 2️⃣ Advanced Statistical Modeling
 
@@ -402,7 +402,7 @@ plot(km_fit, col = c("red", "blue"),
      main = "Survival Probability by Treatment")
 
 
-⸻
+---
 
 3️⃣ Geospatial Health Mapping
 
@@ -421,7 +421,7 @@ leaflet(geo_data) %>%
   )
 
 
-⸻
+---
 
 4️⃣ Machine Learning for Public Health
 
@@ -439,7 +439,7 @@ rf_model <- randomForest(
 varImpPlot(rf_model, main = "Predictive Factors")
 
 
-⸻
+---
 
 5️⃣ Automated Reporting
 
@@ -456,7 +456,7 @@ knitr::kable(summary_stats)
 
 
 
-⸻
+---
 
 ---
 

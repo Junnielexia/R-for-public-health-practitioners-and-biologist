@@ -1,4 +1,3 @@
-````
 # 🧪 R for Public Health & Biology: Beginner's Guide
 
 *A step-by-step introduction to R programming for public health professionals and biologists with no coding experience.*
@@ -23,34 +22,34 @@
 weight_kg <- 70
 weight_lb <- weight_kg * 2.2
 print(weight_lb)
-```
-**Output:** `[1] 154`
 
-### Working with Vectors
-```r
+Output: [1] 154
+
+Working with Vectors
+
 # Create a vector of patient ages
 ages <- c(25, 30, 35, 40, 45)
 
 # Calculate mean age
 mean_age <- mean(ages)
 print(mean_age)
-```
-**Output:** `[1] 35`
 
----
+Output: [1] 35
 
-## 📊 **Importing and Exploring Data**
-### Loading a CSV File
-```r
+⸻
+
+📊 Importing and Exploring Data
+
+Loading a CSV File
+
 # Read data
 covid_data <- read.csv("covid_data.csv")
 
 # View first 6 rows
 head(covid_data)
-```
 
-### Basic Data Exploration
-```r
+Basic Data Exploration
+
 # Summary statistics
 summary(covid_data$Cases)
 
@@ -59,64 +58,65 @@ unique(covid_data$Country)
 
 # Filter for specific country
 usa_data <- covid_data[covid_data$Country == "USA", ]
-```
 
----
 
-## 🔍 **Basic Data Analysis**
-### T-Test (Comparing Two Groups)
-```r
+⸻
+
+🔍 Basic Data Analysis
+
+T-Test (Comparing Two Groups)
+
 # Generate sample data
 treatment <- c(120, 125, 130, 135, 140)
 control <- c(130, 135, 140, 145, 150)
 
 # Run t-test
 t.test(treatment, control)
-```
 
-**Key Output:**
-- *p-value < 0.05* → statistically significant difference
+Key Output:
+	•	p-value < 0.05 → statistically significant difference
 
----
+⸻
 
-## 📈 **Data Visualization**
-### Bar Plot (Cases by Country)
-```r
+📈 Data Visualization
+
+Bar Plot (Cases by Country)
+
 barplot(cases_by_country$Cases,
         names.arg = cases_by_country$Country,
         xlab = "Country",
         ylab = "Total Cases",
         main = "COVID-19 Cases by Country",
         col = "steelblue")
-```
 
-### Scatter Plot (Cases vs Deaths)
-```r
+Scatter Plot (Cases vs Deaths)
+
 plot(covid_data$Cases, covid_data$Deaths,
      xlab = "Cases",
      ylab = "Deaths",
      main = "Cases vs Deaths",
      pch = 19,
      col = "red")
-```
 
----
----
 
-## 📚 **Resources**
-- [R for Data Science](https://r4ds.had.co.nz/)
-- [Public Health R Examples](https://www.r-bloggers.com/)
-- [R Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
+⸻
 
----
+⸻
 
-## **chapter Two**
+📚 Resources
+	•	R for Data Science
+	•	Public Health R Examples
+	•	R Cheat Sheets
 
-Here's the **GitHub-ready Markdown version** of your advanced R guide, formatted with proper code blocks, sections, and GitHub-friendly styling:
+⸻
 
----
+chapter Two
 
-````markdown
+Here’s the GitHub-ready Markdown version of your advanced R guide, formatted with proper code blocks, sections, and GitHub-friendly styling:
+
+⸻
+
+
 # 🔬 Advanced R for Public Health & Biology
 
 *Professional-level R techniques for epidemiological analysis, biostatistics, and health data science*
@@ -127,13 +127,14 @@ Here's the **GitHub-ready Markdown version** of your advanced R guide, formatted
 ```r
 # Install required packages
 install.packages(c("dplyr", "tidyr", "survival", "ggplot2", "sf", "leaflet", "randomForest", "shiny"))
-```
 
----
 
-## 1️⃣ **Advanced Data Wrangling**
-### Reshaping Data with `tidyr`
-```r
+⸻
+
+1️⃣ Advanced Data Wrangling
+
+Reshaping Data with tidyr
+
 library(tidyr)
 
 # Wide to long (for time series)
@@ -150,10 +151,9 @@ wide_data <- pivot_wider(
   names_from = "Month",
   values_from = "Cases"
 )
-```
 
-### Conditional Logic with `case_when()`
-```r
+Conditional Logic with case_when()
+
 library(dplyr)
 
 risk_data <- covid_data %>%
@@ -162,13 +162,14 @@ risk_data <- covid_data %>%
     Cases > 500 ~ "🟡 Medium Risk",
     TRUE ~ "🟢 Low Risk"
   ))
-```
 
----
 
-## 2️⃣ **Advanced Statistical Modeling**
-### Logistic Regression (Binary Outcomes)
-```r
+⸻
+
+2️⃣ Advanced Statistical Modeling
+
+Logistic Regression (Binary Outcomes)
+
 model <- glm(
   Mortality ~ Age + Comorbidity + Treatment,
   data = patient_data,
@@ -177,21 +178,20 @@ model <- glm(
 
 # Get odds ratios
 exp(coef(model))
-```
 
-### Survival Analysis (Kaplan-Meier)
-```r
+Survival Analysis (Kaplan-Meier)
+
 library(survival)
 
 km_fit <- survfit(Surv(Time, Status) ~ Treatment, data = cancer_data)
 plot(km_fit, col = c("red", "blue"), 
      main = "Survival Probability by Treatment")
-```
 
----
 
-## 3️⃣ **Geospatial Health Mapping**
-```r
+⸻
+
+3️⃣ Geospatial Health Mapping
+
 library(sf)
 library(leaflet)
 
@@ -205,13 +205,14 @@ leaflet(geo_data) %>%
     color = ~colorQuantile("Reds", Cases)(Cases),
     popup = ~paste(Location, "<br>Cases:", Cases)
   )
-```
 
----
 
-## 4️⃣ **Machine Learning for Public Health**
-### Random Forest Prediction
-```r
+⸻
+
+4️⃣ Machine Learning for Public Health
+
+Random Forest Prediction
+
 library(randomForest)
 
 rf_model <- randomForest(
@@ -222,13 +223,14 @@ rf_model <- randomForest(
 
 # Variable importance plot
 varImpPlot(rf_model, main = "Predictive Factors")
-```
 
----
 
-## 5️⃣ **Automated Reporting**
-### RMarkdown Template
-````markdown
+⸻
+
+5️⃣ Automated Reporting
+
+RMarkdown Template
+
 ```{r}
 # Analysis chunk
 summary_stats <- health_data %>%
@@ -236,8 +238,11 @@ summary_stats <- health_data %>%
   summarize(Mean_Cases = mean(Cases))
 
 knitr::kable(summary_stats)
-```
-````
+
+
+
+
+⸻
 
 ---
 

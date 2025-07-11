@@ -36,8 +36,9 @@ print("Hello, Public Health World! 🌍🦠")
 5 * 3         # ✖️ Multiplication
 8 / 2         # ➗ Division
 
-
+```
 ⸻
+```
 
 📦 Variables
 
@@ -45,21 +46,22 @@ cases <- 20
 population <- 1000
 
 You just created a “box” named cases and put the number 20 inside it.
-
+```
 ⸻
-
+```
 🧺 Vectors — Lists of Data
 
 daily_cases <- c(5, 7, 8, 6, 9)  # Cases over 5 days
-
+```
+```
 Do calculations:
 
 sum(daily_cases)     # ➕ Total
 mean(daily_cases)    # 📉 Average
 
-
+```
 ⸻
-
+```
 📊 Data Frame — Like a Table
 
 data <- data.frame(
@@ -69,9 +71,9 @@ data <- data.frame(
 )
 print(data)
 
-
+```
 ⸻
-
+```
 🔎 Explore the Data
 
 head(data)       # 👀 First 6 rows
@@ -82,9 +84,10 @@ Access a column:
 
 data$cases
 
+```
 
 ⸻
-
+```
 📈 Make Graphs 🖼️
 
 📊 Bar Plot
@@ -95,7 +98,8 @@ barplot(data$cases,
         main = "📊 Cases by Day",
         xlab = "Day",
         ylab = "Cases")
-
+```
+```
 📈 Line Plot
 
 plot(data$day, data$cases,
@@ -105,9 +109,9 @@ plot(data$day, data$cases,
      xlab = "Day",
      ylab = "Number of Cases")
 
-
+```
 ⸻
-
+```
 📁 Import Real Data (CSV)
 
 mydata <- read.csv("data/malaria_cases.csv")  # Example file
@@ -120,19 +124,19 @@ head(mydata)
 📤 Save Your Output
 
 write.csv(data, "data/output_cases.csv", row.names = FALSE)
-
+```
 
 ⸻
-
+```
 🧪 Run a Simple Test
 
 Check if average daily cases > 5:
 
 t.test(data$cases, mu = 5, alternative = "greater")
 
-
+```
 ⸻
-
+```
 🛠️ Useful Commands Cheatsheet
 
 🧠 Function	🧰 Use	📝 Example
@@ -147,10 +151,10 @@ plot()	Line chart	plot(1:3, c(5,6,7), type="o")
 read.csv()	Load CSV data	read.csv("file.csv")
 write.csv()	Export data to CSV	write.csv(data, "out.csv")
 t.test()	Statistical t-test	t.test(data$cases, mu=5)
-
+```
 
 ⸻
-
+```
 🧪 Practice Time! 💪
 
 Try this beginner challenge:
@@ -171,7 +175,7 @@ barplot(new_cases,
         ylab = "Cases",
         col = "orange")
 
-
+```
 ⸻
 
 📂 Sample Datasets (Optional)
@@ -189,22 +193,22 @@ Need real datasets? Try:
 	•	Kaggle Health Data
 
 ⸻
-
+```
 📚 Learn More
 	•	📘 R for Data Science (Free Book)
 	•	📎 RStudio Cheatsheets
 	•	🌐 Tidyverse.org
 	•	📊 WHO Public Health Data
-
+```
 ⸻
-
+```
 🧠 Made for Pre-Master Students
 
 This project is ideal if you’re:
 	•	✅ New to R
 	•	✅ Studying Biology, Public Health, Epidemiology
 	•	✅ Wanting a safe space to play with data 🧸
-
+```
 ⸻
 
 
